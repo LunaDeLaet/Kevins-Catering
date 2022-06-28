@@ -1,6 +1,6 @@
 .bestel {
     height: 100%;
-    padding-top: 30vh;
+    padding-top: 20vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -22,12 +22,12 @@
 
     &__gerecht {
         list-style-type: none;
-        padding: 30px 0;
+        padding: 30px 0 0 0;
     }
 }
 
 .text {
-    padding: 0 10% 10% 10%;
+    padding: 0 10% 5% 10%;
     font-size: 1.2rem;
 }
 
@@ -38,7 +38,6 @@
 .container {
     position: relative;
     text-align: center;
-    display: grid;
 
     & > a > img {
         width: 40%;
