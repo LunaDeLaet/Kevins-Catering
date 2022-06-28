@@ -9,7 +9,7 @@
   padding-top: 40vh;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://www.gordonramsayrestaurants.com/assets/Uploads/_resampled/CroppedFocusedImage102457650-50-BSK-roasts-.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.8), rgba(7, 22, 39, 0.6)), url("https://www.gordonramsayrestaurants.com/assets/Uploads/_resampled/CroppedFocusedImage102457650-50-BSK-roasts-.jpg") center top;
   background-size: cover;
 }
 .home__text {
@@ -83,6 +83,7 @@
   width: 100vw;
   opacity: 0.98;
   visibility: hidden;
+  z-index: 3;
 }
 .nav.open {
   visibility: visible;
@@ -269,7 +270,7 @@
 }
 .bestel {
   height: 100%;
-  padding-top: 40vh;
+  padding-top: 30vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -281,9 +282,35 @@
   font-size: 3rem;
   margin-bottom: 2rem;
 }
+.bestel__gerecht {
+  list-style-type: none;
+  padding: 30px 0;
+}
 
 .text {
-  padding: 1rem 15%;
+  padding: 0 10% 10% 10%;
+  font-size: 1.2rem;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  display: grid;
+}
+.container > a > img {
+  width: 40%;
+  opacity: 0.5;
+  height: 200px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  padding: 20px;
+  background: rgba(145, 253, 95, 0.8);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -310,6 +337,7 @@ h1 {
 a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .text-secondary {

@@ -1,6 +1,6 @@
 .bestel {
     height: 100%;
-    padding-top: 40vh;
+    padding-top: 30vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -19,8 +19,42 @@
         font-size: 3rem;
         margin-bottom: 2rem;
     }
+
+    &__gerecht {
+        list-style-type: none;
+        padding: 30px 0;
+    }
 }
 
 .text {
-    padding: 1rem 15%;
+    padding: 0 10% 10% 10%;
+    font-size: 1.2rem;
 }
+
+
+
+
+
+.container {
+    position: relative;
+    text-align: center;
+    display: grid;
+
+    & > a > img {
+        width: 40%;
+        opacity: 0.5;
+        height: 200px;
+    }
+  }
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 20px; 
+    background: 
+        rgba($secondary-color, 0.8);
+}
+  

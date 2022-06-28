@@ -26,6 +26,7 @@ h1 {
 a {
     color: set-text-color($primary-color);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .text-secondary {
