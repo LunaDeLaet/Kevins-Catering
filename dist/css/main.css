@@ -297,7 +297,7 @@
   text-align: center;
 }
 .container > a > img {
-  width: 40%;
+  width: 300px;
   opacity: 0.5;
   height: 200px;
 }
@@ -307,7 +307,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 300px;
   padding: 20px;
   background: rgba(145, 253, 95, 0.8);
 }
