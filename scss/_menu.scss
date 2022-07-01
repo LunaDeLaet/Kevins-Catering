@@ -82,7 +82,7 @@
         overflow: hidden;
         background: $primary-color;
         list-style-type: none;
-        padding: 1rem;
+        padding: 1rem 0;
         transform: translateY(-100%);
         @include transition-ease;
 
@@ -93,6 +93,7 @@
         &__item {
             transform: translateX(100vw);
             @include transition-ease;
+            margin: 0;
 
             &.open {
                 transform: translateX(0);
@@ -107,7 +108,6 @@
             display: inline-block;
             font-size: 1.5rem;
             text-transform: uppercase;
-            padding: 2rem 0;
             margin: 1rem 0;
             font-weight: 400;
             @include transition-ease;

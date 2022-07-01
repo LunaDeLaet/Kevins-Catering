@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -97,7 +98,7 @@
   overflow: hidden;
   background: #071627;
   list-style-type: none;
-  padding: 1rem;
+  padding: 1rem 0;
   transform: translateY(-100%);
   transition: all 0.5s ease-in-out;
 }
@@ -107,6 +108,7 @@
 .nav .menu-nav__item {
   transform: translateX(100vw);
   transition: all 0.5s ease-in-out;
+  margin: 0;
 }
 .nav .menu-nav__item.open {
   transform: translateX(0);
@@ -118,7 +120,6 @@
   display: inline-block;
   font-size: 1.5rem;
   text-transform: uppercase;
-  padding: 2rem 0;
   margin: 1rem 0;
   font-weight: 400;
   transition: all 0.5s ease-in-out;
@@ -344,6 +345,10 @@
     scroll-behavior: smooth;
   }
 }
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background: #071627;
   color: #fff;
