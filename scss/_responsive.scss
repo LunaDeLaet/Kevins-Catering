@@ -4,7 +4,7 @@
     }
 
     .nav {
-        visibility: visible;
+        visibility: visible !important;
 
         .menu-nav {
             display: block;
@@ -44,24 +44,12 @@
         }
     }
 
+
     .contact__list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @include media-lg {
-    .projects {
-        &__items {
-            grid-template-columns: repeat(3, 1fr);
-
-        }
-    }
-    .contact__list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-@include media-xl {
 
 }

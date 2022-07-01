@@ -1,6 +1,6 @@
 .bestel {
     height: 100%;
-    padding-top: 20vh;
+    padding: 20vh 0 2rem 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -19,41 +19,76 @@
         font-size: 3rem;
         margin-bottom: 2rem;
     }
-
-    &__gerecht {
-        list-style-type: none;
-        padding: 30px 0 0 0;
-    }
 }
 
 .text {
-    padding: 0 10% 5% 10%;
+    padding: 0 10% 2rem 10%;
     font-size: 1.2rem;
 }
 
 
 
 
-
-.container {
+.col {
     position: relative;
     text-align: center;
 
     & > a > img {
         width: 300px;
-        opacity: 0.5;
+        opacity: 0.4;
         height: 200px;
+        margin: 20px 20px 0 20px;
+        border-radius: 10px;
     }
   }
+
 
 .centered {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50.15%, -50%);
     width: 300px;
     padding: 20px; 
     background: 
-        rgba($secondary-color, 0.8);
+        rgba($secondary-color, 0.6);
 }
-  
+
+.toevoegen {
+    margin: 15px;
+
+    & input {
+        border: none;
+        padding: 5px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 70px;
+    }
+
+    & button {
+        margin: 15px;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+}
+
+.terug {
+    margin: 20px;
+    width: 110px;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    font-size: 1.2rem;
+    text-align: center;
+}
