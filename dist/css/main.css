@@ -297,7 +297,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50.15%, -50%);
+  transform: translate(-50%, -50%);
   width: 300px;
   padding: 20px;
   background: rgba(142, 118, 62, 0.6);
