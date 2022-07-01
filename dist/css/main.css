@@ -248,7 +248,7 @@
   }
 
   .about__bio-image {
-    height: 40vh;
+    height: 50vh;
   }
   .about__items {
     grid-template-columns: repeat(2, 1fr);
