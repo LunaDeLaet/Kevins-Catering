@@ -17,7 +17,7 @@
 
     h4 {
         font-size: 3rem;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
     }
 }
 
@@ -26,18 +26,29 @@
     font-size: 1.2rem;
 }
 
+
+.row {
+    width: 80vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
 .col {
     position: relative;
+    overflow: hidden;
+    cursor: pointer;
     text-align: center;
 
     & > a > img {
         width: 300px;
-        opacity: 0.8;
         height: 200px;
-        margin: 20px;
         border-radius: 10px;
     }
-  }
+}
+
+
 
 
 .centered {
@@ -48,7 +59,16 @@
     width: 300px;
     padding: 20px 0; 
     background: 
-        rgba($secondary-color, 0.8);
+        rgba($secondary-color, 0.9);
+}
+
+
+.brown {
+    position: absolute;
+    padding: 15px 0; 
+    width: 300px;
+    background: 
+        rgba($secondary-color, 0.9);
 }
 
 .toevoegen {
