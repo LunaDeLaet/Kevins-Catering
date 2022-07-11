@@ -14,7 +14,7 @@
     <a href="bestel.php">Ga terug</a>
   </section>
 <section class="text vlees">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">  
 
         <div class="col">
