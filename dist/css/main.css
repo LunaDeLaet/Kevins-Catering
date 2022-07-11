@@ -225,7 +225,6 @@
   .menu-btn {
     visibility: hidden;
   }
-
   .nav {
     visibility: visible !important;
   }
@@ -243,11 +242,9 @@
   .nav .menu-nav__link {
     font-size: 1.5rem;
   }
-
   .about__bio {
     font-size: 1.5rem;
   }
-
   .about__bio-image {
     height: 50vh;
   }
@@ -257,8 +254,18 @@
   .about .text-secondary {
     font-size: 3rem;
   }
-
   .contact__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1175px) {
+  .container .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about .jobs {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -274,7 +281,7 @@
 }
 .bestel h4 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .text {
@@ -282,15 +289,23 @@
   font-size: 1.2rem;
 }
 
+.row {
+  width: 80vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem 1rem;
+}
+
 .col {
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
   text-align: center;
 }
 .col > a > img {
   width: 300px;
-  opacity: 0.8;
   height: 200px;
-  margin: 20px;
   border-radius: 10px;
 }
 
@@ -301,7 +316,14 @@
   transform: translate(-50%, -50%);
   width: 300px;
   padding: 20px 0;
-  background: rgba(142, 118, 62, 0.8);
+  background: rgba(142, 118, 62, 0.9);
+}
+
+.brown {
+  position: absolute;
+  padding: 15px 0;
+  width: 300px;
+  background: rgba(142, 118, 62, 0.9);
 }
 
 .toevoegen {
@@ -389,7 +411,7 @@ header {
 }
 
 footer {
-  font-size: 1rem;
+  font-size: 0.6rem;
   position: fixed;
   bottom: 0.4rem;
   right: 1rem;
@@ -399,81 +421,5 @@ footer {
 }
 
 p > a {
-  margin: 10px !important;
-}
-
-.btn {
-  padding: 10px;
-  margin-top: 50px !important;
-  border-radius: 10px;
-}
-
-.btn-success {
-  color: #fff;
-  background-color: #198754;
-  border-color: #198754;
-}
-
-.btn-success:hover {
-  color: #fff;
-  background-color: #157347;
-  border-color: #146c43;
-}
-
-.btn-check:focus + .btn-success, .btn-success:focus {
-  color: #fff;
-  background-color: #157347;
-  border-color: #146c43;
-  box-shadow: 0 0 0 0.25rem rgba(60, 153, 110, 0.5);
-}
-
-.btn-check:checked + .btn-success, .btn-check:active + .btn-success, .btn-success:active, .btn-success.active, .show > .btn-success.dropdown-toggle {
-  color: #fff;
-  background-color: #146c43;
-  border-color: #13653f;
-}
-
-.btn-check:checked + .btn-success:focus, .btn-check:active + .btn-success:focus, .btn-success:active:focus, .btn-success.active:focus, .show > .btn-success.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(60, 153, 110, 0.5);
-}
-
-.btn-success:disabled, .btn-success.disabled {
-  color: #fff;
-  background-color: #198754;
-  border-color: #198754;
-}
-
-.btn-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
-}
-
-.btn-danger:hover {
-  color: #fff;
-  background-color: #bb2d3b;
-  border-color: #b02a37;
-}
-
-.btn-check:focus + .btn-danger, .btn-danger:focus {
-  color: #fff;
-  background-color: #bb2d3b;
-  border-color: #b02a37;
-  box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
-}
-
-.btn-check:checked + .btn-danger, .btn-check:active + .btn-danger, .btn-danger:active, .btn-danger.active, .show > .btn-danger.dropdown-toggle {
-  color: #fff;
-  background-color: #b02a37;
-  border-color: #a52834;
-}
-
-.btn-check:checked + .btn-danger:focus, .btn-check:active + .btn-danger:focus, .btn-danger:active:focus, .btn-danger.active:focus, .show > .btn-danger.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
-}
-
-.btn-danger:disabled, .btn-danger.disabled {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  margin: 10px;
 }/*# sourceMappingURL=main.css.map */

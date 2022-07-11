@@ -48,8 +48,21 @@
     .contact__list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @include media-lg {
+    
+    
+    .container .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    .about .jobs {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
 }
