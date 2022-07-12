@@ -28,11 +28,16 @@ $secondary-color: rgb(142, 118, 62);
     }
     
 }
+@mixin media-md-lg {
+    @media screen and (min-width: 1000px) {
+        @content;
+    }
+    
+}
 @mixin media-lg {
     @media screen and (min-width: 1175px) {
         @content;
     }
-    
 }
 @mixin media-xl {
     @media screen and (min-width: 1600px) {

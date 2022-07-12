@@ -116,6 +116,11 @@ if (isset($_POST['paypal']) && $products_in_cart && !empty($products_in_cart)) {
 
 <?=template_header('Winkelwagen')?>
 
+
+<form>
+    <button class="terug2" type="submit" formaction="bestel.php">Ga terug naar catalogus</button>
+</form>
+
 <div class="cart content-wrapper row">
     <div class="col">
         <h1>Winkelwagen</h1>

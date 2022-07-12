@@ -33,9 +33,9 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
     <p class="text"></p>
 </section>
 
-<section class="terug">
-  <a href="bestel.php">Ga terug</a>
-</section>
+<form>
+    <button class="terug" type="submit" formaction="bestel.php">Ga terug</button>
+</form>
 
 
 <section class="text vlees">

@@ -19,23 +19,26 @@ if (isset($_GET['id'])) {
 
 <?=template_header('Product')?>
 
-<div class="product content-wrapper row">
 
-<div class="col">
-    <img class="img-product" src="imgs/<?=$product['img']?>" alt="<?=$product['name']?>">
-    <h1 class="name"><?=$product['name']?></h1>
-    <span class="price">
-        &euro;<?=$product['price']?>
-    </span>
-    <div class="description">
-        <?=$product['desc']?>
+<div class="product content-wrapper container">
+<div class="row">
+    <div class="col">
+        <img class="img-product" src="imgs/<?=$product['img']?>" alt="<?=$product['name']?>">
     </div>
-    <form action="index.php?page=cart" method="post">
-        <input type="number" name="quantity" min="1" max="200" placeholder="Aantal personen" required>
-        <input type="hidden" name="product_id" value="<?=$product['id']?>">
-        <input type="submit" value="Toevoegen aan winkelwagen">
-    </form>
-
+    <div class="col">
+        <h1 class="name"><?=$product['name']?></h1>
+        <span class="price">
+            &euro;<?=$product['price']?>
+        </span>
+        <div class="description">
+            <?=$product['desc']?>
+        </div>
+        <form action="index.php?page=cart" method="post">
+            <input type="number" name="quantity" min="1" max="200" placeholder="Aantal personen" required>
+            <input type="hidden" name="product_id" value="<?=$product['id']?>">
+            <input type="submit" value="Toevoegen aan winkelwagen">
+        </form>
+    </div>
 </div>
 </div>
 

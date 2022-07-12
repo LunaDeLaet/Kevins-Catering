@@ -260,6 +260,14 @@
   .container .row {
     grid-template-columns: repeat(2, 1fr);
   }
+  .product > .row {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .product > .row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 @media screen and (min-width: 1175px) {
   .container .row {
@@ -300,7 +308,6 @@
 .col {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   text-align: center;
 }
 .col > a > img {
@@ -349,40 +356,55 @@
 }
 
 .terug {
-  margin: 20px;
-  width: 115px;
+  margin: 20px 0 0 -100px;
+  width: 120px;
   background: rgb(142, 118, 62);
   color: #fff;
   padding: 15px;
   border-radius: 10px;
+  border: none;
   z-index: 2;
   font-size: 1.2rem;
   text-align: center;
+  cursor: pointer;
+}
+
+.terug2 {
+  margin: 150px 0 0 -100px;
+  width: 200px;
+  background: rgb(142, 118, 62);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  z-index: 2;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 .img-product {
   width: 100%;
   height: auto;
   max-width: 500px;
-  margin-top: 50px;
 }
 
 .description {
   height: auto;
-  width: 450px;
+  width: 50vh;
   align-items: center;
   margin: 20px auto;
-  padding: auto;
   text-align: left;
   line-height: 1.5;
 }
 
-.cart {
-  padding-top: 100px;
-}
-
 form {
   margin-left: 17%;
+}
+
+.product > .row > .col > form > input {
+  max-width: 500px;
+  margin: 5px auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
