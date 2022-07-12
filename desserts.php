@@ -42,11 +42,11 @@ $total_products = $pdo->query('SELECT * FROM products')->rowCount();
         <?php foreach ($products as $product): ?>
 
             <div class="col">
-            <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
-                <img src="imgs/<?=$product['img']?>" alt="<?=$product['name']?>">
-                <div class="centered jaaa">
-                    <?=$product['name']?>
-                </div>
+                <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
+                    <img src="imgs/<?=$product['img']?>" alt="<?=$product['name']?>">
+                    <div class="centered produkt">
+                        <?=$product['name']?>
+                    </div>
                 </a>
             </div>
 

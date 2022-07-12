@@ -60,19 +60,19 @@
     padding: 20px 0; 
     background: 
         rgba($secondary-color, 0.9);
+
+    & .produkt {
+        transform: translate(-20%, -50%);
+    }
 }
 
 
-.brown {
-    position: absolute;
-    padding: 15px 0; 
-    width: 300px;
-    background: 
-        rgba($secondary-color, 0.9);
-}
+
+
 
 .toevoegen {
     margin: 15px;
+    margin-top: 40px;
 
     & input {
         border: none;
@@ -89,14 +89,13 @@
         border: none;
         border-radius: 25px;
         color: white;
-        padding: 15px 32px;
+        padding: 15px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         cursor: pointer;
     }
-
 }
 
 .terug {
@@ -109,4 +108,28 @@
     z-index: 2;
     font-size: 1.2rem;
     text-align: center;
+}
+
+.img-product {
+    width: 100%; height:auto; max-width:500px;
+    margin-top: 50px;
+}
+
+.description {
+    height: auto;
+    width: 450px;
+    align-items: center;
+    margin: 20px auto;
+    padding: auto;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.cart {
+    padding-top: 100px;
+}
+
+
+form {
+    margin-left: 17%;
 }

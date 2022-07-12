@@ -5,7 +5,7 @@ if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['produc
     $product_id = (int)$_POST['product_id'];
     $quantity = (int)$_POST['quantity'];
     // Prepare the SQL statement, we basically are checking if the product exists in our databaser
-    $stmt = $pdo->prepare('SELECT * FROM products WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT * FROM desserts WHERE id = ?');
     $stmt->execute([$_POST['product_id']]);
     // Fetch the product from the database and return the result as an Array
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -70,7 +70,7 @@ if ($products_in_cart) {
     // There are products in the cart so we need to select those products from the database
     // Products in cart array to question mark string array, we need the SQL statement to include IN (?,?,?,...etc)
     $array_to_question_marks = implode(',', array_fill(0, count($products_in_cart), '?'));
-    $stmt = $pdo->prepare('SELECT * FROM products WHERE id IN (' . $array_to_question_marks . ')');
+    $stmt = $pdo->prepare('SELECT * FROM desserts WHERE id IN (' . $array_to_question_marks . ')');
     // We only need the array keys, not the values, the keys are the id's of the products
     $stmt->execute(array_keys($products_in_cart));
     // Fetch the products from the database and return the result as an Array
@@ -116,58 +116,59 @@ if (isset($_POST['paypal']) && $products_in_cart && !empty($products_in_cart)) {
 
 <?=template_header('Winkelwagen')?>
 
-<div class="cart content-wrapper">
-    <h1>Winkelwagen</h1>
-    <form action="index.php?page=cart" method="post">
-        <table>
-            <thead>
-                <tr>
-                    <td colspan="2">Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Total</td>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (empty($products)): ?>
-                <tr>
-                    <td colspan="5" style="text-align:center;">You have no products added in your Shopping Cart</td>
-                </tr>
-                <?php else: ?>
-                <?php foreach ($products as $product): ?>
-                <tr>
-                    <td class="img">
-                        <a href="index.php?page=product&id=<?=$product['id']?>">
-                            <img src="imgs/<?=$product['img']?>" width="50" height="50" alt="<?=$product['name']?>">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="index.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>
-                        <br>
-                        <a href="index.php?page=cart&remove=<?=$product['id']?>" class="remove">Remove</a>
-                    </td>
-                    <td class="price">&euro;<?=$product['price']?></td>
-                    <td class="quantity">
-                        <input type="number" name="quantity-<?=$product['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="200" placeholder="Aantal" required>
-                    </td>
-                    <td class="price">&euro;<?=$product['price'] * $products_in_cart[$product['id']]?></td>
-                </tr>
-                <?php endforeach; ?>
-                <?php endif; ?>
-            </tbody>
-        </table>
-        <div class="subtotal">
-            <span class="text">Subtotal</span>
-            <span class="price">&euro;<?=$subtotal?></span>
-        </div>
-        <div class="buttons">
-            <input type="submit" value="Update" name="update">
-            <input type="submit" value="Place Order" name="placeorder">
-        </div>
-        <div class="paypal">
-            <button type="submit" name="paypal"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" border="0" alt="PayPal Logo"></button>
-        </div>
-    </form>
+<div class="cart content-wrapper row">
+    <div class="col">
+        <h1>Winkelwagen</h1>
+    </div>
+    <div class="col">
+        <form action="index.php?page=cart" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">Product</td>
+                        <td>Prijs</td>
+                        <td>Aantal</td>
+                        <td>Totaal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($products)): ?>
+                    <tr>
+                        <td colspan="5" style="text-align:center;">U heeft nog geen producten in uw winkelwagen.</td>
+                    </tr>
+                    <?php else: ?>
+                    <?php foreach ($products as $product): ?>
+                    <tr>
+                        <td class="img">
+                            <a href="index.php?page=product&id=<?=$product['id']?>">
+                                <img src="imgs/<?=$product['img']?>" width="50" height="50" alt="<?=$product['name']?>">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="index.php?page=product&id=<?=$product['id']?>"><?=$product['name']?></a>
+                            <br>
+                            <a href="index.php?page=cart&remove=<?=$product['id']?>" class="remove">Verwijderen</a>
+                        </td>
+                        <td class="price">&euro;<?=$product['price']?></td>
+                        <td class="quantity">
+                            <input type="number" name="quantity-<?=$product['id']?>" value="<?=$products_in_cart[$product['id']]?>" min="1" max="200" placeholder="Aantal" required>
+                        </td>
+                        <td class="price">&euro;<?=$product['price'] * $products_in_cart[$product['id']]?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+            <div class="subtotal">
+                <span class="text">Subtotal</span>
+                <span class="price">&euro;<?=$subtotal?></span>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Winkelwagen bijwerken" name="update">
+                <input type="submit" value="Bestellen" name="placeorder">
+            </div>
+        </form>
+    </div>
 </div>
 
 <?=template_footer()?>
