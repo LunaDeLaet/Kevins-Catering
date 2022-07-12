@@ -23,7 +23,7 @@ $secondary-color: rgb(142, 118, 62);
 
 
 @mixin media-md {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 817px) {
         @content;
     }
     

@@ -155,6 +155,14 @@
   transition-delay: 0.55s;
 }
 
+.menu-nav__item:nth-child(5) {
+  transition-delay: 0.65s;
+}
+
+.fas {
+  color: white;
+}
+
 .about {
   padding-bottom: 2rem;
 }
@@ -221,7 +229,7 @@
   font-size: 1.5rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 817px) {
   .menu-btn {
     visibility: hidden;
   }
@@ -260,12 +268,12 @@
   .container .row {
     grid-template-columns: repeat(2, 1fr);
   }
-  .product > .row {
+  .product > .row, .placeorder > .row {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 @media screen and (min-width: 1000px) {
-  .product > .row {
+  .product > .row, .placeorder > .row {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
@@ -299,7 +307,7 @@
 
 .row {
   width: 80vw;
-  margin: 2rem auto 0 auto;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem 1rem;
@@ -356,7 +364,7 @@
 }
 
 .terug {
-  margin: 20px 0 0 -100px;
+  margin: 20px 0 0 10%;
   width: 120px;
   background: rgb(142, 118, 62);
   color: #fff;
@@ -370,7 +378,7 @@
 }
 
 .terug2 {
-  margin: 150px 0 0 -100px;
+  margin: 100px 0 0 10%;
   width: 200px;
   background: rgb(142, 118, 62);
   color: #fff;
@@ -391,20 +399,27 @@
 
 .description {
   height: auto;
-  width: 50vh;
+  width: 100%;
   align-items: center;
   margin: 20px auto;
   text-align: left;
   line-height: 1.5;
 }
 
-form {
-  margin-left: 17%;
+.wagen {
+  text-align: left !important;
 }
 
 .product > .row > .col > form > input {
   max-width: 500px;
   margin: 5px auto;
+}
+
+.placeorder {
+  height: 80vh;
+  width: 80vw;
+  padding: 10%;
+  margin: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {

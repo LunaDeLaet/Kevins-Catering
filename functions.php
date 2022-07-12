@@ -17,7 +17,6 @@ function pdo_connect_mysql() {
 // Template header, feel free to customize this
 function template_header($title) {
     // Get the amount of items in the shopping cart, this will be displayed in the header.
-$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 echo <<<EOT
 <!DOCTYPE html>
 <html>
@@ -37,16 +36,21 @@ echo <<<EOT
         <nav class="nav navbar">
         <ul class="menu-nav">
             <li class="manu-nav__item">
-            <a href="index.php" class="menu-nav__link menu-nav__title active">KEVINS CATERING</a>
+                <a href="index.php" class="menu-nav__link menu-nav__title active">KEVINS CATERING</a>
             </li>
             <li class="menu-nav__item">
-            <a href="bestel.php" class="menu-nav__link">CATALOGUS</a>
+                <a href="bestel.php" class="menu-nav__link">CATALOGUS</a>
             </li>
             <li class="menu-nav__item">
-            <a href="about.php" class="menu-nav__link">OVER</a>
+                <a href="about.php" class="menu-nav__link">OVER</a>
             </li>
             <li class="menu-nav__item">
-            <a href="contact.php" class="menu-nav__link">CONTACT</a>
+                <a href="contact.php" class="menu-nav__link">CONTACT</a>
+            </li>
+            <li class="menu-nav__item">
+                <a href="index.php?page=cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
             </li>
         </ul>
         </nav>

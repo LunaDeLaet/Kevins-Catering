@@ -15,22 +15,6 @@ form {
 }
 
 
-.link-icons a span {
-	display: inline-block;
-	text-align: center;
-	background-color: #63748e;
-	border-radius: 50%;
-	color: #FFFFFF;
-	font-size: 12px;
-	line-height: 16px;
-	width: 16px;
-	height: 16px;
-	font-weight: bold;
-	position: absolute;
-	top: 22px;
-	right: 0;
-}
-
 
 .products-wrapper .centered span .price {
 	color: #dddddd !important;
@@ -191,6 +175,8 @@ main .cart .buttons input[type="submit"] {
 	font-weight: bold;
 	cursor: pointer;
 	border-radius: 5px;
+	margin-bottom: 10px;
+
 }
 main .cart .buttons input[type="submit"]:hover {
 	background: #434f61;
