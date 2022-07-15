@@ -48,7 +48,7 @@ echo <<<EOT
                 <a href="contact.php" class="menu-nav__link">CONTACT</a>
             </li>
             <li class="menu-nav__item">
-                <a href="index.php?page=cart">
+                <a href="index.php?page=cart" class="menu-nav__link">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
