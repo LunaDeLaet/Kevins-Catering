@@ -149,8 +149,40 @@
     margin: 5px auto;
 }
 
-.placeorder {
+.placed {
     height: 80vh; width: 80vw;
     padding: 10%;
     margin: auto;
+}
+
+
+.overschrijvingsinfo {
+    width: 50vw;
+    margin: 100px auto 50px auto!important;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.bestelling-form {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    & label {
+        line-height: 1.5;
+    }
+
+}
+
+.bevestig {
+    margin: 20px 0;
+    width: auto;
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    z-index: 2;
+    font-size: 1.2rem;
+    cursor: pointer;
 }

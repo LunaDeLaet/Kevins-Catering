@@ -59,8 +59,12 @@
 }
 
 @include media-md-lg {
-    .product > .row, .placeorder > .row {
+    .product > .row {
         grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .placeorder > .row {
+        grid-template-columns: repeat(1, 1fr) !important;
     }
 }
 

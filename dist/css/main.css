@@ -10,7 +10,7 @@
   padding-top: 40vh;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.8), rgba(7, 22, 39, 0.6)), url("https://www.gordonramsayrestaurants.com/assets/Uploads/_resampled/CroppedFocusedImage102457650-50-BSK-roasts-.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.8), rgba(7, 22, 39, 0.6)), url("food1.jpg") center top;
   background-size: cover;
 }
 .home__text {
@@ -169,7 +169,7 @@
 .about__bio-image {
   height: 60vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://media.istockphoto.com/photos/confident-chef-standing-arms-crossed-in-kitchen-picture-id877309720?k=20&m=877309720&s=612x612&w=0&h=R1AM72IPeBZR_nZ5OxIb7H5IOGSpKqtHBRi5AEF5ndE=") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("imgs/kok.jpg") center top;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -217,7 +217,7 @@
   align-items: center;
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://www.gordonramsayrestaurants.com/assets/Uploads/_resampled/CroppedFocusedImage102457650-50-BSK-roasts-.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("imgs/food1.jpg") center top;
   background-size: cover;
 }
 .contact h4 {
@@ -273,8 +273,11 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  .product > .row, .placeorder > .row {
+  .product > .row {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .placeorder > .row {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 @media screen and (min-width: 1175px) {
@@ -292,7 +295,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://www.whitetruffleconsultants.com/wp-content/uploads/2020/05/food-photography.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("food2.jpg") center top;
   background-size: cover;
 }
 .bestel h4 {
@@ -415,11 +418,41 @@
   margin: 5px auto;
 }
 
-.placeorder {
+.placed {
   height: 80vh;
   width: 80vw;
   padding: 10%;
   margin: auto;
+}
+
+.overschrijvingsinfo {
+  width: 50vw;
+  margin: 100px auto 50px auto !important;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.bestelling-form {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+}
+.bestelling-form label {
+  line-height: 1.5;
+}
+
+.bevestig {
+  margin: 20px 0;
+  width: auto;
+  background: rgb(142, 118, 62);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  z-index: 2;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
