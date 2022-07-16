@@ -17,7 +17,10 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?=template_header('Vleesgerechten')?>
+<?php 
+require_once('functions.php');
+template_header('Vleesgerechten');
+?>
 
 
 <div class="product content-wrapper container">
@@ -28,7 +31,7 @@ if (isset($_GET['id'])) {
     <div class="col">
         <h1 class="name"><?=$product['name']?></h1>
         <span class="price">
-            &euro;<?=$product['price']?>
+            &euro;<?=$product['price']?> per portie
         </span>
         <div class="description">
             <?=$product['desc']?>
@@ -43,3 +46,6 @@ if (isset($_GET['id'])) {
 </div>
 
 <?=template_footer()?>
+
+
+

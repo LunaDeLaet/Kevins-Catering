@@ -28,7 +28,7 @@ if (isset($_GET['id'])) {
     <div class="col">
         <h1 class="name"><?=$product['name']?></h1>
         <span class="price">
-            &euro;<?=$product['price']?>
+            &euro;<?=$product['price']?> per portie
         </span>
         <div class="description">
             <?=$product['desc']?>

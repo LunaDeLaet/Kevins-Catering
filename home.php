@@ -1,6 +1,7 @@
-
-
-<?=template_header('Home')?>
+<?php
+require_once('functions.php');
+template_header('Home');
+?>
 
 <section class="home">
           <h1>KEVINS CATERING</h1>

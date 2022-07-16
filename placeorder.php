@@ -1,7 +1,10 @@
-<?=template_header('Bestelling plaatsen')?>
+<?php
+require_once('functions.php');
+template_header('Bestelling plaatsen');
+?>
 
 
-<div class="placeorder">
+<section class="placeorder">
     <div class="overschrijvingsinfo">
         <h1>Bestelling bijna voltooid!</h1>
         <p>De betaling van bestellingen bij Kevins catering gebeurt momenteel nog via bankoverschrijving. 
@@ -16,7 +19,7 @@
     </div>
 
     <div class="bestelling-form">
-        <form action="/placed.php" method="POST">
+        <form action="placed.php" method="POST">
             <label for="name">Voornaam + naam: </label><br>
             <input type="text" id="naam" name="naam" required><br><br>
             <label for="adres">Adres: </label><br>
@@ -25,9 +28,9 @@
             <input type="text" id="mail" name="mail" required><br><br>
             <label for="IBAN">Uw IBAN: </label><br>
             <input type="text" id="IBAN" name="IBAN" required><br><br>
-            <button type="submit" formaction="/placed.php" class="bevestig">Bevestig bestelling</button>
+            <button type="submit" formaction="placed.php" class="bevestig">Bevestig bestelling</button>
         </form>
     </div>
-</div>
+</section>
 
 <?=template_footer()?>

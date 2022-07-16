@@ -16,7 +16,6 @@ function pdo_connect_mysql() {
 
 // Template header, feel free to customize this
 function template_header($title) {
-    // Get the amount of items in the shopping cart, this will be displayed in the header.
 echo <<<EOT
 <!DOCTYPE html>
 <html>

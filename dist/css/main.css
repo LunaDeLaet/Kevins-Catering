@@ -10,7 +10,7 @@
   padding-top: 40vh;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.8), rgba(7, 22, 39, 0.6)), url("food1.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.8), rgba(7, 22, 39, 0.6)), url("https://images.unsplash.com/photo-1628578569073-8ee77295315d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80") center top;
   background-size: cover;
 }
 .home__text {
@@ -169,7 +169,7 @@
 .about__bio-image {
   height: 60vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("imgs/kok.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://images.unsplash.com/photo-1590577976322-3d2d6e2130d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center top;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -295,7 +295,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("food2.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80") center top;
   background-size: cover;
 }
 .bestel h4 {
@@ -306,25 +306,6 @@
 .text {
   padding: 0;
   font-size: 1.2rem;
-}
-
-.row {
-  width: 80vw;
-  margin: 3rem auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem 1rem;
-}
-
-.col {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-.col > a > img {
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
 }
 
 .centered {
@@ -342,7 +323,7 @@
 
 .toevoegen {
   margin: 15px;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 .toevoegen input {
   border: none;
@@ -396,7 +377,6 @@
 
 .img-product {
   width: 100%;
-  height: auto;
   max-width: 500px;
 }
 
@@ -514,4 +494,23 @@ footer {
 
 p > a {
   margin: 10px;
+}
+
+.row {
+  width: 80vw;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem 1rem;
+}
+
+.col {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.col > a > img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */
