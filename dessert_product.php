@@ -14,10 +14,10 @@ if (isset($_GET['id'])) {
 } else {
     // Simple error to display if the id wasn't specified
     exit('Product bestaat niet!');
-}
-?>
+};
 
-<?=template_header('Desserts')?>
+template_header('Desserts');
+?>
 
 
 <div class="product content-wrapper container">

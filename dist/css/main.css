@@ -217,7 +217,7 @@
   align-items: center;
   text-align: center;
   overflow: hidden;
-  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("imgs/food1.jpg") center top;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://images.unsplash.com/photo-1543339308-43e59d6b73a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center top;
   background-size: cover;
 }
 .contact h4 {
@@ -423,7 +423,7 @@
 }
 
 .bevestig {
-  margin: 20px 0;
+  margin: 20px 0 100px 0;
   width: auto;
   background: rgb(142, 118, 62);
   color: #fff;
@@ -433,6 +433,21 @@
   z-index: 2;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.placeorder {
+  margin: -100px 0;
+  width: 100vw;
+  height: 140vh;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.6)), url("https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center top;
+  background-size: cover;
+}
+
+.placed {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, rgba(7, 22, 39, 0.9), rgba(7, 22, 39, 0.8)), url("https://images.unsplash.com/photo-1608389168343-ba8aa0cb3a63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") center top;
+  background-size: cover;
 }
 
 @media (prefers-reduced-motion: no-preference) {
