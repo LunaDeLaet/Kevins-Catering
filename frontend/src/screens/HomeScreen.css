@@ -1,0 +1,26 @@
+.home {
+    height: 90vh;
+    padding-top: 40vh;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, rgba(7, 22, 39, 0.8), rgba(7, 22, 39, 0.6)), url("https://images.unsplash.com/photo-1628578569073-8ee77295315d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80") center top;
+    background-size: cover;
+  }
+  .home__text {
+    padding: 20px;
+    font-size: 2rem;
+  }
+  .home__button {
+    padding: 10px 20px;
+    background: rgb(142, 118, 62);
+    color: #fff;
+    border-radius: 25px;
+  }
+  .home__button:hover {
+    color: #8e763e;
+    background: #071627;
+  }
+
+  .home > a {
+    text-decoration: none;
+  }
