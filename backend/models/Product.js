@@ -16,7 +16,15 @@ const productSchema = new mongoose.Schema({
     imageUrl: {
         type: String,
         required: true 
-    }
+    },
+    type: {
+        type: String,
+        required: true
+    },
+    countInStock: {
+        type: Number,
+        required: true
+    },
 })
 
 const Product = mongoose.model("product", productSchema)
