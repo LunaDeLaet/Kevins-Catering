@@ -1,12 +1,18 @@
 import "./ProductScreen.css"
 import { useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 // Actions
 import { getProductDetails } from "../redux/actions/productActions"
 import { addToCart } from "../redux/actions/cartActions"
 
-const ProductScreen = ({ match, history }) => {
+const ProductScreen = () => {
+  let { id } = useParams()
+  const navigate = useNavigate()
+
+
   const [qty, setQty] = useState(1)
   const dispatch = useDispatch()
 
@@ -14,14 +20,14 @@ const ProductScreen = ({ match, history }) => {
   const { loading, error, product } = productDetails
 
   useEffect(() => {
-    if (product && match.params.id !== product._id) {
-      dispatch(getProductDetails(match.params.id))
+    if (product && id !== product._id) {
+      dispatch(getProductDetails(id))
     }
-  }, [dispatch, match, product])
+  }, [dispatch, id, product])
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty))
-    history.push(`/cart`)
+    navigate(`/cart`)
   }
 
   return (
@@ -38,31 +44,25 @@ const ProductScreen = ({ match, history }) => {
             </div>
             <div className="left__info">
               <p className="left__name">{product.name}</p>
-              <p>Price: ${product.price}</p>
-              <p>Description: {product.description}</p>
+              <p>Prijs: €{product.price} per portie</p>
+              <p>Descriptie: {product.description}</p>
             </div>
           </div>
           <div className="productscreen__right">
             <div className="right__info">
               <p>
-                Price:
-                <span>${product.price}</span>
+                Prijs:
+                <span>€{product.price} per portie</span>
               </p>
               <p>
-                Status:
-                <span>
-                  {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
-                </span>
-              </p>
-              <p>
-                Qty
+                Aantal personen: 
                 <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                  {[...Array(product.countInStock).keys()].map((x) => (
-                    <option key={x + 1} value={x + 1}>
-                      {x + 1}
-                    </option>
-                  ))}
-                </select>
+                    {[...Array(product.countInStock).keys()].map((x) => (
+                      <option key={(x+1)*10} value={(x+1)*10}>
+                        {(x+1)*10}
+                      </option>
+                    ))}
+                  </select>
               </p>
               <p>
                 <button type="button" onClick={addToCartHandler}>

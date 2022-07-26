@@ -1,34 +1,47 @@
-import './CatalogusScreen.css'
-import { useDebugValue, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import './Voorgerechten.css'
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-// components
-import Product from '../components/Product'
+// Components
+import Product from "../components/Product";
 
-// actions
-import { getProducts as listProducts } from '../redux/actions/productActions'
-import { http2 } from 'browserify/lib/builtins'
-
+//Actions
+import { getProducts as listProducts } from "../redux/actions/productActions";
 
 const Voorgerechten = () => {
+  
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
+  const getProducts = useSelector((state) => state.getProducts);
+  const { products, loading, error } = getProducts;
 
-    const getProducts = useSelector(state => state.getProducts)
-    const { products, loading, error } = getProducts
-
-    useEffect(() => {
-        dispatch(listProducts())
-    }, [dispatch])
-
+  useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch]);
 
   return (
-    <div className='voorgerechten'>
-        {loading ? <h2>Loading...</h2> : error ? <h2>{error}</h2> : products.map(product => (
-            <Product productId={product._id} key={product._id} name={product.name} price={product.price} description={product.description} imageUrl={product.imageUrl} />
-        ))}
+    <div className="homescreen">
+      <h2 className="homescreen__title">Voorgerechten</h2>
+      <div className="homescreen__products">
+        {loading ? (
+          <h2>Loading...</h2>
+        ) : error ? (
+          <h2>{error}</h2>
+        ) : (
+          products.map((product) => (
+            <Product
+              key={product._id}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              imageUrl={product.imageUrl}
+              productId={product._id}
+            />
+          ))
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Voorgerechten

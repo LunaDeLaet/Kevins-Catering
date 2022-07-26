@@ -11,7 +11,7 @@ const NavBar = ({click}) => {
         
         <ul className="navbar__links">
             <li>
-                <Link to="/catalogus" className="link">
+                <Link to="/products" className="link">
                   CATALOGUS
 
                 </Link>

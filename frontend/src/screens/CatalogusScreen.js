@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const CatalogusScreen = () => {
   return (
     <div className='catalogus'>
-      <Link to="/voorgerechten" className="link">
+      <Link to="/products/voorgerechten" className="link">
         VOORGERECHTEN
       </Link>
         

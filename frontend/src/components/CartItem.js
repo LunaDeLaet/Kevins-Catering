@@ -7,18 +7,18 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
       <div className="cartitem__image">
         <img src={item.imageUrl} alt={item.name} />
       </div>
-      <Link to={`/product/${item.product}`} className="cartItem__name">
+      <Link to={`/products/${item.product}`} className="cartItem__name">
         <p>{item.name}</p>
       </Link>
-      <p className="cartitem__price">${item.price}</p>
+      <p className="cartitem__price">€{item.price}</p>
       <select
         value={item.qty}
         onChange={(e) => qtyChangeHandler(item.product, e.target.value)}
         className="cartItem__select"
       >
         {[...Array(item.countInStock).keys()].map((x) => (
-          <option key={x + 1} value={x + 1}>
-            {x + 1}
+          <option key={(x+1)*10} value={(x+1)*10}>
+            {(x+1)*10}
           </option>
         ))}
       </select>
